@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Top banner styling */
+.banner {
+    width: 100vw; /* Full viewport width */
+    height: 200px;
+    background-color: #d1c0b6; /* Light brownish color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Text inside the banner */
+.banner h1 {
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Circle image container */
+.image-container {
+    position: absolute;
+    bottom: -75px; /* Slightly overlapping the banner */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+}
+
+/* Circular image styling */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+    margin-top: 100px; /* Prevents overlap with the image */
+}
+
+/* Title styling */
+h1 {
+    font-size: 3.5rem;
+    color: black;
+    margin-bottom: 50px;
+}
+
+/* Button container - two columns of three buttons */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Increased gap between buttons */
+    justify-content: center;
+}
+
+/* Button styling */
+.button {
+    width: 300px; /* Bigger button width */
+    height: 120px; /* Bigger button height */
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 20px; /* Rectangular shape with rounded edges */
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Image background for button */
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); /* Blur background image */
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+/* Overlay behind text to make text stand out */
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 2;
+}
+
+/* Button text */
+.button span {
+    position: relative;
+    z-index: 3;
+}
+
+/* Button hover effect */
+.button:hover::before {
+    filter: blur(5px); /* Increase blur on hover */
+    transform: scale(1.05); /* Zoom out background slightly */
+}
+
+.button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Background images for each button */
+.button-1::before {
+    background-image: url('img/colorcraze.png');
+}
+
+.button-2::before {
+    background-image: url('img/shiftsum.png'); /* Replace with actual image */
+}
+
+.button-3::before {
+    background-image: url('img/reelated.png'); /* Replace with actual image */
+}
+
+.button-4::before {
+    background-image: url('img/bbbuddy.png'); /* Replace with actual image */
+}
+
+.button-5::before {
+    background-image: url('img/wherewedroppin.png'); /* Replace with actual image */
+}
+
+.button-6::before {
+    background-image: url('img/your-image6.jpg'); /* Replace with actual image */
+}
